@@ -1,16 +1,22 @@
-FROM node:latest
+FROM sprkl/npm
 
-RUN mkdir -p /usr/src/app/react-src
-WORKDIR /usr/src/app
+# make a directory for the application, otherwise files will be copied to the root folder
+RUN mkdir -p /code
+WORKDIR /code
 
-RUN npm install -g nodemon
+COPY package.json package.json
+COPY package-lock.json package-lock.json
 
-COPY package.json /usr/src/app/
+COPY react-src/package.json react-src/package.json
+COPY react-src/package-lock.json react-src/package-lock.json
+
 RUN npm install
+RUN cd react-src && npm install
 
-COPY react-src/package.json /usr/src/app/react-src
-RUN npm install
+RUN npm link @sprkl/gitelemetry
 
-COPY . /usr/src/app
+# Add source files
+COPY . .
 
-EXPOSE 3000 4200
+ENV PORT 3000
+EXPOSE 3000

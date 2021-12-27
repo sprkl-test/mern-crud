@@ -4,10 +4,7 @@
   "description": "A simple records system using MongoDB, Express.js, React.js, and Node.js with real-time CRUD operations using Socket.io",
   "main": "server.js",
   "scripts": {
-    "start:mongo": "docker stop mongo-example ; docker rm mongo-example ; docker run -dp 27017:27017 --name mongo-example mongo",
-    "start:server": "node server",
-    "start": "npm run start:mongo && npm run start:server",
-    "postinstall": "npm link @sprkl/gitelemetry",
+    "start": "node server",
     "prestart": "gitelemetry apply -a 1000"
   },
   "repository": {
