@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "prestart": "gitelemetry apply -a 1000"
+    "prestart": "sprkl apply -a 1000"
   },
   "repository": {
     "type": "git",
