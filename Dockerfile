@@ -13,7 +13,7 @@ COPY react-src/package-lock.json react-src/package-lock.json
 RUN npm install
 RUN cd react-src && npm install
 
-RUN npm link sprkl
+RUN npm link @sprkl/sprkl
 
 # Add source files
 COPY . .
