@@ -4,8 +4,7 @@
   "description": "A simple records system using MongoDB, Express.js, React.js, and Node.js with real-time CRUD operations using Socket.io",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "prestart": "sprkl apply -a 1000"
+    "start": "node server"
   },
   "repository": {
     "type": "git",
