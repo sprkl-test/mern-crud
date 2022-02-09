@@ -4,7 +4,7 @@
   "description": "A simple records system using MongoDB, Express.js, React.js, and Node.js with real-time CRUD operations using Socket.io",
   "main": "server.js",
   "scripts": {
-    "start": "node server"
+    "start": "sprkl --name=mern-crud --recipe-attributes.amount=100 -- node server"
   },
   "repository": {
     "type": "git",

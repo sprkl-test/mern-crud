@@ -17,6 +17,7 @@ RUN npm link @sprkl/sprkl
 
 # Add source files
 COPY . .
+COPY .git .git
 
 ENV PORT 3000
 EXPOSE 3000

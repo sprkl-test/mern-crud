@@ -1,4 +1,3 @@
-require('@sprkl/sprkl').init({ serviceName: 'mern-crud', agent: {host: process.env.OTEL_COLLECTOR}});
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
